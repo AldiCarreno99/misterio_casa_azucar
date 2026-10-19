@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#7d3f32">
+  <meta name="description" content="Juego colectivo para debatir sobre La casa de azúcar, de Silvina Ocampo.">
+  <title>El misterio de la casa de azúcar</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <div class="eyebrow">LECTURA · PISTAS · DEBATE</div>
+      <h1>El misterio de la casa de azúcar</h1>
+      <p>Un juego para investigar el cuento, compartir hipótesis y justificar ideas con el texto.</p>
+      <div class="save-status" id="saveStatus" role="status"><span class="status-dot"></span> Guardado en este dispositivo</div>
+    </header>
+
+    <nav class="tabs" aria-label="Secciones">
+      <button class="tab active" data-view="play">Jugar</button>
+      <button class="tab" data-view="edit">Preguntas</button>
+      <button class="tab install-tab hidden" id="installApp">Instalar app</button>
+    </nav>
+
+    <section id="playView" class="view">
+      <div class="section-heading">
+        <div><p class="eyebrow dark">RECORRIDO</p><h2>Desafíos</h2></div>
+        <span class="count-pill" id="challengeCount">3 desafíos</span>
+      </div>
+      <p class="helper">Los primeros tres desafíos vienen preparados. Desde el desafío 4, las consignas se construyen durante el debate en clase.</p>
+      <div id="challengeList" class="challenge-list"></div>
+      <div class="classroom-note"><strong>La regla del misterio</strong><p>No alcanza con elegir una respuesta: expliquen qué parte del cuento les hace pensar eso. Las interpretaciones pueden ser diferentes si se apoyan en el texto.</p></div>
+    </section>
+
+    <section id="editView" class="view hidden">
+      <div class="section-heading"><div><p class="eyebrow dark">CREACIÓN COLECTIVA</p><h2>Preguntas de la clase</h2></div></div>
+      <p class="helper">Anotá aquí las preguntas que surjan del debate. Se guardan automáticamente en este celular y estarán disponibles cuando vuelvas a abrir la app en el mismo navegador.</p>
+      <div id="editorList" class="editor-list"></div>
+      <button class="primary-button full" id="addChallenge">＋ Agregar desafío</button>
+      <button class="secondary-button full" id="exportQuestions">Exportar copia de las preguntas</button>
+      <label class="import-label full">Importar preguntas guardadas<input id="importQuestions" type="file" accept="application/json,.json"></label>
+      <p class="tiny-note">Consejo: exportá una copia al terminar la clase para tener un respaldo o pasar las preguntas a otro dispositivo.</p>
+    </section>
+
+    <footer>Hecho para leer, conversar y pensar en grupo.</footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+EL MISTERIO DE LA CASA DE AZÚCAR · PWA PARA CELULARES
+
+QUÉ ES
+Una aplicación web progresiva (PWA) adaptable a teléfonos y tabletas. No requiere Python, Kivy ni instalar herramientas de programación.
+
+FUNCIONES
+- Tres desafíos iniciales para abrir la lectura y conversar sobre las pistas.
+- Desde el desafío 4, las preguntas empiezan vacías y se crean durante el debate.
+- Editor para escribir la pregunta, el tema, hasta cuatro opciones y una consigna para fundamentar con el cuento.
+- Guardado automático en el navegador de ese dispositivo.
+- Exportación e importación de preguntas como archivo JSON para copias de seguridad y traslado a otro dispositivo.
+- Se puede preparar para funcionar sin conexión una vez instalada y cargada desde HTTPS.
+- Diseño táctil adaptable a celulares.
+
+COSTO
+Los archivos de la aplicación son gratuitos. Para instalarla como PWA en forma fiable, necesita publicarse en un alojamiento HTTPS. Puede usarse un servicio gratuito como GitHub Pages sin comprar un dominio. No es necesario contratar un plan pago. Los servicios gratuitos pueden cambiar sus condiciones, pero esta app no necesita un servidor propio ni una base de datos paga.
+
+PRUEBA LOCAL
+Se puede abrir index.html para revisar parte de la interfaz, pero la instalación PWA y el modo offline necesitan un servidor HTTPS o localhost. No alcanza con abrir el archivo directamente.
+
+PUBLICAR GRATIS CON GITHUB PAGES
+1. Crear una cuenta gratuita en GitHub si todavía no tenés una.
+2. Crear un repositorio público nuevo, por ejemplo: misterio-casa-azucar.
+3. Subir el contenido de esta carpeta al repositorio, manteniendo la estructura de carpetas.
+4. En el repositorio, entrar en Settings > Pages.
+5. En Build and deployment, elegir Deploy from a branch; seleccionar la rama main y la carpeta /(root), y guardar.
+6. Esperar a que GitHub Pages publique el sitio. La URL tendrá una forma similar a https://USUARIO.github.io/misterio-casa-azucar/ (reemplazar USUARIO por el usuario real de GitHub).
+7. Abrir esa dirección en el celular.
+   - Android/Chrome: menú ⋮ > Instalar aplicación o Añadir a pantalla de inicio.
+   - iPhone/Safari: botón Compartir > Añadir a pantalla de inicio.
+
+No hace falta comprar un dominio ni ingresar datos de pago para usar un repositorio público con GitHub Pages según las condiciones habituales del servicio gratuito.
+
+GUARDADO Y PRIVACIDAD
+Las preguntas se guardan en el almacenamiento local del navegador/dispositivo, no en una cuenta ni en la nube. No se envían a un servidor. Si se borran los datos del navegador, se pueden perder; exportá una copia de seguridad al terminar cada clase. Para usar las preguntas en otro dispositivo, exportá el archivo JSON e importalo allí.
+
+NOTA SOBRE EL CONTENIDO
+Los desafíos 1 a 3 son consignas iniciales. A partir del desafío 4, las preguntas deben surgir del debate en clase; por eso empiezan en blanco. No se inventan acontecimientos del cuento.

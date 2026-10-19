@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "El misterio de la casa de azúcar",
+  "short_name": "Casa de azúcar",
+  "description": "Juego colectivo de lectura y debate sobre La casa de azúcar, de Silvina Ocampo.",
+  "lang": "es-AR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff9ef",
+  "theme_color": "#7d3f32",
+  "icons": [
+    {"src":"./icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"}
+  ]
+}
