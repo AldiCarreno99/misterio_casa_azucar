@@ -45,15 +45,7 @@ function renderPlay(){
   });
   host.querySelectorAll('[data-answer]').forEach(btn=>btn.addEventListener('click',()=>{selectedAnswers[btn.dataset.id]=Number(btn.dataset.answer);renderPlay();}));
 }
-function renderEditor(){
-  const host=$('#editorList');host.innerHTML='';
-  challenges.filter(item=>item.number>=4).sort((a,b)=>a.number-b.number).forEach(item=>{
-    const card=document.createElement('article');card.className='editor-card';
-    card.innerHTML=`<div class="editor-title"><h3>Desafío ${item.number}</h3><span class="count-pill">Respuesta correcta: ${String.fromCharCode(65+item.correct)}</span></div><p><strong>${escapeHtml(item.question)}</strong></p><ol type="A">${item.options.map(opt=>`<li>${escapeHtml(opt)}</li>`).join('')}</ol><p class="tiny-note">${escapeHtml(item.explanation)}</p>`;
-    host.appendChild(card);
-  });
-}
-function setView(view){document.querySelectorAll('.tab').forEach(btn=>btn.classList.toggle('active',btn.dataset.view===view));$('#playView').classList.toggle('hidden',view!=='play');$('#editView').classList.toggle('hidden',view!=='edit');if(view==='edit')renderEditor();else renderPlay();window.scrollTo({top:0,behavior:'smooth'});}
+function setView(view){document.querySelectorAll('.tab[data-view]').forEach(btn=>btn.classList.toggle('active',btn.dataset.view===view));$('#playView').classList.remove('hidden');renderPlay();window.scrollTo({top:0,behavior:'smooth'});}
 document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>setView(btn.dataset.view)));
 challenges=loadData();saveData();renderPlay();
 if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(()=>{});
