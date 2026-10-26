@@ -1,4 +1,4 @@
-const CACHE_NAME = 'misterio-casa-azucar-pwa-v2';
+const CACHE_NAME = 'misterio-casa-azucar-pwa-v3';
 const APP_FILES = [
   './', './index.html', './styles.css', './app.js', './manifest.json',
   './icons/icon-192.png', './icons/icon-512.png'
